@@ -36,9 +36,54 @@
     }
     </script>
     
+	<!-- import JQuery
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+ 
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			alert("JQuery is working! :D");
+		});
+	</script>
+	-->
+	
     <body oncontextmenu='return false'>
         
 		<p>Dot Gears</p>
     
+		<script>
+	
+			function getRequests() {
+				var s1 = location.search.substring(1, location.search.length).split('&'),
+				r = {}, s2, i;
+				for (i = 0; i < s1.length; i += 1) {
+					s2 = s1[i].split('=');
+					r[decodeURIComponent(s2[0]).toLowerCase()] = decodeURIComponent(s2[1]);
+				}
+			return r;
+			};
+
+			var QueryString = getRequests();
+			//alert("id = " + QueryString["id"] + "; host = " + QueryString["host"]);
+			
+			
+			
+			
+			
+			if(QueryString["host"] == "www.facebook.com")
+			{
+				window.location.assign("https://www.facebook.com/pages/Dot-Gears/1084768911537595");
+			}
+			else if(QueryString["host"] == "itunes.apple.com")
+			{
+				window.location.assign("https://itunes.apple.com/artist/id495882211");
+			}
+			else 
+			{
+				window.location.assign("https://itunes.apple.com/artist/id495882211");
+			}
+			
+		</script>
+		
 	</body>
 </html>
