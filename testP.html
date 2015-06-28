@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About</title>
+    </head>
+    
+    <style>
+        html {
+            height: 100%;
+            overflow: hidden;
+            /* Hides scrollbar in IE */
+        }
+    
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+    
+    #flashcontent {
+        height: 100%;
+    }
+    </style>
+    <script type='text/javascript'>
+        var disabled_message = '';
+        document.oncontextmenu = function() {
+            return false;
+        }
+    document.onmousedown = function md(e) {
+        try {
+            if (event.button == 2 || event.button == 3) {
+                if (disabled_message != '') alert(disabled_message);
+                return false;
+            }
+        } catch (e) {
+            if (e.which == 3) return false;
+        }
+    }
+    </script>
+    
+    
+	<body oncontextmenu="return false">
+	
+	<frameset>
+		<frame src="http://y8.com/">
+	</frameset>
+	
+    </body>
+	
+</html>
