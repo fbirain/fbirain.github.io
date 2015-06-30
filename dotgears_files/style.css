@@ -562,7 +562,7 @@ ul li{
 
 #contentt{
     /*margin-top: 70px;*/
-    background: url(../images/bg_trangcon.png); /* Old browsers */
+    background: url(bg_trangcon.png); /* Old browsers */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aeb2ba', endColorstr='#bdc2cb',GradientType=0 ); /* IE6-9 */
 }
 .content-inner{
