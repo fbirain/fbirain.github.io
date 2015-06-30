@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html>
-   
-    <head>
-        <title>Dot Gears Mobile Apps</title>
-		
-		<!-- auto refresh page with 5 seconds-->
-		<meta http-equiv="refresh" content="5">
-		<link rel="Shortcut icon" href="icon128-2x.png" type="image/x-icon" />
-    </head>
-    
-	<style>
-        html {
-            height: 100%;
-            overflow: hidden;
-            /* Hides scrollbar in IE */
-        }
-    
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
+<html class="ui-mobile">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Dot Gears Mobile Apps</title>
+
+    <link rel="Shortcut icon" href="icon128-2x.png" type="image/x-icon" />
+
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="dotgears_files/style.css">
+    <link rel="stylesheet" href="dotgears_files/global.css">
+
+    <script src="dotgears_files/jquery-1.js"></script>
+    <script src="dotgears_files/jquery.js"></script>
+
+</head>
+
+<script type='text/javascript'>
+    var disabled_message = '';
+    document.oncontextmenu = function() {
+        return false;
     }
-    </style>
-    
-	<script type='text/javascript'>
-        var disabled_message = '';
-        document.oncontextmenu = function() {
-            return false;
-        }
     document.onmousedown = function md(e) {
         try {
             if (event.button == 2 || event.button == 3) {
@@ -38,9 +33,9 @@
             if (e.which == 3) return false;
         }
     }
-    </script>
-    
-	<!-- import JQuery
+</script>
+
+<!-- import JQuery
 	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
  
 	<script type="text/javascript">
@@ -50,44 +45,166 @@
 		});
 	</script>
 	-->
-	
-    <body oncontextmenu='return false'>
-        
-		<p>...loading...</p>
-    
-		<script>
-	
-			function getRequests() {
-				var s1 = location.search.substring(1, location.search.length).split('&'),
-				r = {}, s2, i;
-				for (i = 0; i < s1.length; i += 1) {
-					s2 = s1[i].split('=');
-					r[decodeURIComponent(s2[0]).toLowerCase()] = decodeURIComponent(s2[1]);
-				}
-			return r;
-			};
 
-			var QueryString = getRequests();
-			//alert("id = " + QueryString["id"] + "; host = " + QueryString["host"]);
-			
-			
-			
-			
-			
-			if(QueryString["host"] == "www.facebook.com")
-			{
-				window.location.assign("https://www.facebook.com/pages/Dot-Gears/1084768911537595");
-			}
-			else if(QueryString["host"] == "itunes.apple.com")
-			{
-				window.location.assign("https://itunes.apple.com/app/zombie-roadkill/id997687435?mt=12");
-			}
-			else 
-			{
-				window.location.assign("https://itunes.apple.com/app/zombie-roadkill/id997687435?mt=12");
-			}
-			
-		</script>
-		
-	</body>
+<body oncontextmenu='return false'>
+
+    <script>
+        function getRequests() {
+            var s1 = location.search.substring(1, location.search.length).split('&'),
+                r = {},
+                s2, i;
+            for (i = 0; i < s1.length; i += 1) {
+                s2 = s1[i].split('=');
+                r[decodeURIComponent(s2[0]).toLowerCase()] = decodeURIComponent(s2[1]);
+            }
+            return r;
+        };
+
+        var QueryString = getRequests();
+        //alert("id = " + QueryString["id"] + "; host = " + QueryString["host"]);
+
+
+
+
+        if (QueryString["host"] == "www.facebook.com") {
+            window.location.assign("https://www.facebook.com/pages/Dot-Gears/1084768911537595");
+        } else if (QueryString["host"] == "itunes.apple.com") {
+            window.location.assign("https://itunes.apple.com/app/zombie-roadkill/id997687435?mt=12");
+        } else {
+			//show more apps page
+            //window.location.assign("https://itunes.apple.com/app/zombie-roadkill/id997687435?mt=12");
+        }
+    </script>
+
+
+
+
+
+    <div id="wapper">
+
+        <div id="headerr">
+            <div class="header-inner">
+
+                <a href="" class="logo-me"></a>
+                <h1 style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dot Gears</h1>
+
+                <ul class="menu">
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div style="min-height: 445px;" id="contentt">
+            <br>
+            <script>
+                $(function() {
+                    $('#tab2').hide();
+
+                    $('a[href^="#tab"]').click(function() {
+                        $('a[href^="#tab"]').parent().removeClass('inactive');
+                        $(this).parent().addClass('inactive');
+
+                        $('.gtab').hide();
+                        $(this.hash).show();
+
+                        //event.preventDefault();
+                        return false;
+                    });
+                });
+            </script>
+            <div class="content-white" style="padding-right: 20px;">
+                <div class="content-inner">
+
+                    <div class="item-me-show">
+
+                        <ul id="gtab">
+                            <li class="inactive"><a href="#tab1">More Apps</a></li>
+                        </ul>
+
+                        <div class="item-cont" style="margin-left: 21px; padding-top: 10px; display: block;">
+
+
+
+                            <div style="display: block;" class="child-item-show gtab" id="tab1">
+
+                                <div class="item-cont2">
+                                    <div class="gdesc"></div>
+
+                                    <div class="vgame">
+                                        <a href="https://itunes.apple.com/app/zombie-roadkill/id997687435?mt=12">
+                                            <img src="http://a4.mzstatic.com/us/r30/Purple7/v4/73/be/6c/73be6c07-cd4d-b30c-1a63-7fb1bfc0cbf4/icon256-2x.png">
+                                        </a>
+                                        <div class="vdesc"><b>Zombie Roadkill</b> is #1 action game that blends the boundaries of classic shooter games and timeless racing games...</div>
+                                        <div class="vdown"><a href="https://itunes.apple.com/app/zombie-roadkill/id997687435?mt=12">Download</a></div>
+                                    </div>
+
+                                    <div class="vgame">
+                                        <a href="https://itunes.apple.com/app/ping-pong-3d/id999020161?mt=12">
+                                            <img src="http://a4.mzstatic.com/us/r30/Purple5/v4/44/91/f4/4491f4bd-d45a-de6a-5eb9-a7009244f1d4/icon512.png">
+                                        </a>
+                                        <div class="vdesc"><b>Ping Pong 3D</b>: Use the mouse to move the racked, you don’t need to press any button to hit the ball...</div>
+                                        <div class="vdown"><a href="https://itunes.apple.com/app/ping-pong-3d/id999020161?mt=12">Download</a></div>
+                                    </div>
+
+                                    <div class="vgame">
+                                        <a href="https://itunes.apple.com/app/tennis-champion/id1005631104?mt=12">
+                                            <img src="http://a5.mzstatic.com/us/r30/Purple7/v4/7f/e2/1a/7fe21a26-4004-6b6f-9165-28b57563f50d/icon256-2x.png">
+                                        </a>
+                                        <div class="vdesc"><b>Tennis Champion</b>: Welcome to the most authentic tennis game on App Store...</div>
+                                        <div class="vdown"><a href="https://itunes.apple.com/app/tennis-champion/id1005631104?mt=12">Download</a></div>
+                                    </div>
+
+                                    <div class="vgame">
+                                        <a href="https://itunes.apple.com/app/x-construction/id1007254114?mt=12">
+                                            <img src="http://a1.mzstatic.com/us/r30/Purple5/v4/8c/08/45/8c08454a-3f76-a4bc-f7f2-88700f93dceb/icon256-2x.png">
+                                        </a>
+                                        <div class="vdesc"><b>X Construction</b>: Build a bridge with the given amount of materials to let the truck safely cross the valley...</div>
+                                        <div class="vdown"><a href="https://itunes.apple.com/app/x-construction/id1007254114?mt=12">Download</a></div>
+                                    </div>
+
+                                    <div class="vgame">
+                                        <a href="https://itunes.apple.com/app/defense-witches/id998042898?mt=12">
+                                            <img src="http://a5.mzstatic.com/us/r30/Purple5/v4/78/6c/e0/786ce0d0-02f0-3175-75f8-b9b39ffe9e58/icon256-2x.png">
+                                        </a>
+                                        <div class="vdesc"><b>Defense Witches</b>: The world's most devilishly addictive defense game is back - welcome to Defense Witches...</div>
+                                        <div class="vdown"><a href="https://itunes.apple.com/app/defense-witches/id998042898?mt=12">Download</a></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div style="clear: both"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+        </div>
+
+
+
+
+
+        <div id="bottom">
+            <div class="bottom-inner">
+                <div class="bottom-inner-1">
+                    <p>
+
+                    </p>
+                </div>
+                <div class="bottom-inner-2">
+                    <p> <span style="font-weight: bold">        </span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
 </html>
