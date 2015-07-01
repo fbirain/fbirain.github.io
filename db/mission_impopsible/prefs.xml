@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<params>
+		<param id="splash_holdtime" value="5"/>
+		
+		<param id="media_path" value="media/"/>
+		
+		<param id="game_file" value="game.swf"/>
+		<param id="snds_file" value="snds.swf"/>
+		
+		<param id="splash_files" value="splash_1.jpg"/>
+		<param id="video_files" value=""/>
+	</params>
+</xml>
