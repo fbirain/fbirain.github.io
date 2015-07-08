@@ -1,0 +1,27 @@
+<root>
+	<moto>
+		<frontwheel>1.8</frontwheel>
+		<rearwheel>1.8</rearwheel>
+		<frontbar1>10.2</frontbar1>
+		<frontbar2>8.2</frontbar2>
+		<rearbar>6.2</rearbar>
+		<body>2</body>
+		
+		<dynamical>26</dynamical>
+		<speedup>1.1</speedup>
+		<forwardbackwards>150</forwardbackwards>
+		<styleforwardbackwards>100</styleforwardbackwards>
+		<frontabsorber>25.5</frontabsorber>
+		<rearabsorber>25</rearabsorber>
+		<maxspeed>26</maxspeed>
+	</moto>
+	<person>
+		<head>0.1</head>
+		<body>0.1</body>
+		<leg1>0.2</leg1>
+		<leg2>0.2</leg2>
+		<arm1>0.2</arm1>
+		<arm2>0.2</arm2>
+	</person>
+	<gravity>10</gravity>
+</root>
